@@ -111,8 +111,8 @@ if __name__ == "__main__":
     
     # args.data_path = "ACDC_data_preprocessed"
     
-    df_train = pd.read_csv("./Training_patients.csv")
-    df_val = pd.read_csv("./Validation_patients.csv")
+    df_train = pd.read_csv("./Training_patients_init.csv")
+    df_val = pd.read_csv("./Validation_patients_init.csv")
     
     dataset_train = Dataset(args.data_path, df_train, augment=True, rot_p=0.5)
     dataloader_train = DataLoader(dataset_train, batch_size=args.batch_size, shuffle=True,
