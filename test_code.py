@@ -75,7 +75,7 @@ if __name__ == "__main__":
     if device.type == 'cuda':
         torch.cuda.empty_cache()
     
-    df_val = pd.read_csv("./Testing_patients.csv")
+    df_val = pd.read_csv("./Testing_patients_main.csv")
     
     # args.data_path = "../Data Preprocessed"
     # args.model_weights_path = "./model_weights/model_weights.pth"
