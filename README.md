@@ -31,7 +31,7 @@ The repository is implemented in Python 3.10. For the most compatibility, please
 ```bash
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
-conda create --name CMorhNet python=3.7
+conda create --name CMorhNet python=3.10
 conda activate CMorhNet
 pip install -r requirments.txt
 ```
