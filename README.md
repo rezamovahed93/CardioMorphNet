@@ -18,3 +18,12 @@ UK Biobank and M&M datasets, CardioMorphNet outperforms state-of-the-art methods
 in cardiac motion estimation and clinical indices extraction.
 </p>
 
+## Data
+<p align="justify">
+This repository uses the [M&M (Multi-Centre, Multi-Vendor & Multi-Disease) dataset](https://www.ub.edu/mnms/). 
+To reproduce the experiments, please download the dataset from the link above. 
+</p>
+
+
+
+
