@@ -105,8 +105,8 @@ if __name__ == "__main__":
     if device.type == 'cuda':
         torch.cuda.empty_cache()
     
-    df_train = pd.read_csv("./Training_patients.csv")
-    df_val = pd.read_csv("./Validation_patients.csv")
+    df_train = pd.read_csv("./Training_patients_main.csv")
+    df_val = pd.read_csv("./Validation_patients_main.csv")
     # df_train = []
     # df_val = []
     # args.batch_size = 1 
