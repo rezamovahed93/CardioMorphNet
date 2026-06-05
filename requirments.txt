@@ -1,0 +1,25 @@
+torch==2.4.1
+torchvision==0.19.1
+torchaudio==2.4.1
+matplotlib
+scipy
+opencv-python
+scikit-learn
+monai
+scikit-image
+tensorboard
+pydicom
+SimpleITK
+vtk
+imageio[ffmpeg]
+pymeshlab
+nibabel
+pyvista
+probreg
+# cupy-cuda11x
+# cupy-cuda11x
+fpsample
+antspyx
+torch_geometric
+openpyxl
+trimesh
