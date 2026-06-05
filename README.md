@@ -20,7 +20,7 @@ in cardiac motion estimation and clinical indices extraction.
 
 ## Data
 <p align="justify">
-This repository uses the M&M (Multi-Centre, Multi-Vendor & Multi-Disease) dataset(https://www.ub.edu/mnms/). 
+This repository uses the M&M (Multi-Centre, Multi-Vendor & Multi-Disease) dataset (https://www.ub.edu/mnms/). 
 To reproduce the experiments, please download the dataset from the link above. 
 </p>
 
