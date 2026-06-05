@@ -24,6 +24,17 @@ This repository uses the M&M (Multi-Centre, Multi-Vendor & Multi-Disease) datase
 To reproduce the experiments, please download the dataset from the link above. 
 </p>
 
+## Installation
+The repository is implemented in Python 3.10. For the most compatibility, please use this version and run the below commnds to install the required packages: 
+
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+conda env create -f environment.yml
+conda activate your-env
+```
+
 
 
 
