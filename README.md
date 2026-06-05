@@ -25,7 +25,7 @@ To reproduce the experiments, please download the dataset from the link above.
 </p>
 
 ## Installation
-The repository is implemented in Python 3.10. For the most compatibility, please use this version and run the below commnds to install the required packages: 
+The repository is implemented in Python 3.10. For the most compatibility, please use this version and run the commands below to install the required packages: 
 
 
 ```bash
@@ -41,8 +41,14 @@ pip install -r requirments.txt
 ```bash
 python main_preprocess.py ...
 python split_csvs.py
-
-
+python train_code_seg.py
+python test_code_seg.py
+python vis_results_seg_only.py
+python eval_cal_seg_only.py 
+python train_code.py
+python test_code.py
+python vis_results.py
+python eval_cal_csv.py
 ```
 
 
