@@ -5,7 +5,7 @@
 
 ## Overview
 <p align="justify">
-**CardioMorphNet** is a recurrent Bayesian deep learning framework for 3D cardiac 
+CardioMorphNet is a recurrent Bayesian deep learning framework for 3D cardiac 
 shape-guided deformable registration using short-axis (SAX) cine CMR images. 
 It employs a recurrent variational autoencoder (RVAE) to model spatio-temporal 
 dependencies across the cardiac cycle, coupled with two posterior models for 
