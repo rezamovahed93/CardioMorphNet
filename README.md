@@ -4,6 +4,7 @@
 > Reza Akbari Movahed, Abuzar Rezaee, Arezoo Zakeri, Colin Berry, Edmond S.L. Ho, Ali Gooya
 
 ## Overview
+<p align="justify">
 **CardioMorphNet** is a recurrent Bayesian deep learning framework for 3D cardiac 
 shape-guided deformable registration using short-axis (SAX) cine CMR images. 
 It employs a recurrent variational autoencoder (RVAE) to model spatio-temporal 
@@ -15,3 +16,5 @@ The Bayesian formulation further enables uncertainty map computation for estimat
 motion fields, providing confidence measures for predictions. Validated on the 
 UK Biobank and M&M datasets, CardioMorphNet outperforms state-of-the-art methods 
 in cardiac motion estimation and clinical indices extraction.
+</p>
+
