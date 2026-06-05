@@ -36,6 +36,12 @@ conda activate CMorhNet
 pip install -r requirments.txt
 ```
 
+## Usage
+
+```bash
+python main.py --config config.py
+```
+
 
 
 
