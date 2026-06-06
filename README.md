@@ -19,9 +19,8 @@ UK Biobank and M&M datasets, CardioMorphNet outperforms state-of-the-art methods
 in cardiac motion estimation and clinical indices extraction.
 </p>
 
-![Architecture Overview](Framework_Architecture.png)
 <p align="center">
-  <img src="Framework_Architecture.png">
+  <img src="assets/Framework_Architecture.png" alt="Architecture Overview"/>
   <br>
   <em>Inference architecture of the CardioMorphNet framework for cardiac shape registration.</em>
 </p>
