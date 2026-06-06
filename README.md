@@ -19,6 +19,7 @@ in cardiac motion estimation and clinical indices extraction.
 </p>
 
 ![Architecture or Overview Figure](Framework_Architecture.png)
+*[Inference architecture of CardioMorphNet framework for cardiac shape registration.]*
 
 
 ## Data
