@@ -45,25 +45,102 @@ pip install -r requirments.txt
 ```
 
 ## Usage
-1. Run the code below to perform the preprocessing step and split the data for two-stage development of the framework.  
-```bash
-python main_preprocess.py ...
-python split_csvs.py
-```
-2. Next, run the following lines to train and validate the segmentation module of the framework. 
-```bash
-python train_code_seg.py
-python test_code_seg.py
-python vis_results_seg_only.py
-python eval_cal_seg_only.py 
-```
-3. Then, run the following code to train and validate the whole cardiac motion estimation framework. 
+
+### 1. Preprocessing
+Preprocess the raw data and generate the patient split CSV files.
 
 ```bash
-python train_code.py
-python test_code.py
-python vis_results.py
-python eval_cal_csv.py
+python main_preprocess.py \
+    --data_path <path/to/raw/dataset> \
+    --preprocessed_data_path <path/to/save/preprocessed/data> \
+    --csv_paths <path/to/dataset_info.csv> \
+    --zero_pad_flag
+```
+
+Then split the generated CSV files into `_init` and `_main` subsets for the two-stage training pipeline:
+
+```bash
+python split_csvs.py   ... \
+    --ratio 0.25 \
+    --random-state 42 \
+    --output-dir <path/to/output/dir>
+```
+
+---
+
+### 2. Segmentation Module
+
+**Train:**
+```bash
+python train_code_seg.py \
+    --data_path <path/to/preprocessed/data> \
+    --model_weights_path <path/to/pretrained/weights.pth> \
+    --seg_model_path <path/to/seg/model/> \
+    --epoch_size 150 \
+    --batch_size 1 \
+    --learning_rate 0.001 \
+    --patience 5 \
+    --min_delta 0.0001 \
+    --num_workers 4 \
+    --verbose
+```
+
+**Test:**
+```bash
+python test_code_seg.py \
+    --data_path <path/to/preprocessed/data> \
+    --model_weights_path <path/to/model/weights.pth> \
+    --seg_model_path <path/to/seg/model/> \
+    --batch_size 1 \
+    --saving_results_path ./results_seg_only
+```
+
+**Visualise & Evaluate:**
+```bash
+python vis_results_seg_only.py \
+    --results_path ./results_seg_only \
+    --saving_dir ./vis_results_seg_only
+
+python eval_cal_seg_only.py
+```
+
+---
+
+### 3. Full Motion Estimation Framework
+
+**Train:**
+```bash
+python train_code.py \
+    --data_path <path/to/preprocessed/data> \
+    --model_weights_path <path/to/pretrained/weights.pth> \
+    --seg_model_path <path/to/seg/model/> \
+    --epoch_size 150 \
+    --batch_size 1 \
+    --learning_rate 0.001 \
+    --coeff_smoothness 0.03 \
+    --patience 5 \
+    --min_delta 0.0001 \
+    --num_workers 4 \
+    --verbose
+```
+
+**Test:**
+```bash
+python test_code.py \
+    --data_path <path/to/preprocessed/data> \
+    --model_weights_path <path/to/model/weights.pth> \
+    --seg_model_path <path/to/seg/model/> \
+    --batch_size 1 \
+    --saving_results_path ./results
+```
+
+**Visualise & Evaluate:**
+```bash
+python vis_results.py \
+    --results_path ./results \
+    --saving_dir ./vis_results
+
+python eval_cal_csv.py  <path/to/results>
 ```
 The entire process, from preprocessing to training/validation of the framework, is provided in main_notebook.ipynb. You can use this Jupyter file to implement the model from scratch. 
 
