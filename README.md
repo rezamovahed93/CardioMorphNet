@@ -65,7 +65,7 @@ python test_code.py
 python vis_results.py
 python eval_cal_csv.py
 ```
-  
+The entire process, from preprocessing to training/validation of the framework, is provided in main_notebook.ipynb. You can use this Jupyter file to implement the model from scratch. 
 
 ## Citation
 
