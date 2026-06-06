@@ -45,19 +45,27 @@ pip install -r requirments.txt
 ```
 
 ## Usage
-
+1. Run the code below to perform the preprocessing step and split the data for two-stage development of the framework.  
 ```bash
 python main_preprocess.py ...
 python split_csvs.py
+```
+2. Next, run the following lines to train and validate the segmentation module of the framework. 
+```bash
 python train_code_seg.py
 python test_code_seg.py
 python vis_results_seg_only.py
 python eval_cal_seg_only.py 
+```
+3. Then, run the following code to train and validate the whole cardiac motion estimation framework. 
+
+```bash
 python train_code.py
 python test_code.py
 python vis_results.py
 python eval_cal_csv.py
 ```
+  
 
 ## Citation
 
