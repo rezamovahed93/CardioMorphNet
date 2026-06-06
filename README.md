@@ -51,6 +51,18 @@ python vis_results.py
 python eval_cal_csv.py
 ```
 
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@article{movahed2025cardiomorphnet,
+  title={CardioMorphNet: Cardiac Motion Prediction Using a Shape-Guided Bayesian Recurrent Deep Network},
+  author={Movahed, Reza Akbari and Rezaee, Abuzar and Zakeri, Arezoo and Berry, Colin and Ho, Edmond SL and Gooya, Ali},
+  journal={Medical Image Analysis},
+  year={2026}
+}
+```
 
 
 
