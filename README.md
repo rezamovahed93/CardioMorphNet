@@ -74,7 +74,7 @@ python split_csvs.py   ... \
 ```bash
 python train_code_seg.py \
     --data_path <path/to/preprocessed/data> \
-    --model_weights_path <path/to/pretrained/weights.pth> \
+    --model_weights_path <path/to/weights_of_trained_model/weights.pth> \
     --seg_model_path <path/to/seg/model/> \
     --epoch_size 150 \
     --batch_size 1 \
