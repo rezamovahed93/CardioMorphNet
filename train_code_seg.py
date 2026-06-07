@@ -126,7 +126,7 @@ if __name__ == "__main__":
     n_batch_val = len(dataloader_val)      # Total number of batches for the validation phase
     
     model = MyModel(device, args.coeff_smoothness, args.seg_model_path).to(device)
-    model.load_state_dict(torch.load(args.model_weights_path, map_location=device))
+    # model.load_state_dict(torch.load(args.model_weights_path, map_location=device))
     
     freez_weights(model.net_img)
     freez_weights(model.net_dt_posterior)
@@ -134,30 +134,7 @@ if __name__ == "__main__":
     freez_weights(model.net_phi_zt)
     freez_weights(model.net_infer_z)
     freez_weights(model.net_z_prior)
-    freez_weights(model.ConvLSTM)
-
-    # freez_weights(model.seg_posterior.model.model)
-    
-    # for param in model.seg_posterior.model.model[2][1].parameters():
-    #     param.requires_grad = True
-        
-    # for param in model.seg_posterior.model.model[2][0].parameters():
-    #     param.requires_grad = True
-        
-    # freez_weights(model.seg_posterior)
-
-    # model.seg_posterior.decoder.conv3d2
-    # model.seg_posterior.decoder.conv3d3
-
-    # for param in model.seg_posterior.decoder.conv3d1.parameters():
-    #     param.requires_grad = True
-    
-    # for param in model.seg_posterior.decoder.conv3d2.parameters():
-    #     param.requires_grad = True
-
-    # for param in model.seg_posterior.decoder.conv3d3.parameters():
-    #     param.requires_grad = True
-        
+    freez_weights(model.ConvLSTM)        
         
     optimizer = torch.optim.Adam(model.parameters(), lr= args.learning_rate, amsgrad=True)
 
