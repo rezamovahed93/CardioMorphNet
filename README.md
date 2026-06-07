@@ -89,7 +89,6 @@ python train_code_seg.py \
 python test_code_seg.py \
     --data_path <path/to/preprocessed/data> \
     --model_weights_path <path/to/model/weights.pth> \
-    --seg_model_path <path/to/seg/model/> \
     --batch_size 1 \
     --saving_results_path ./results_seg_only
 ```
