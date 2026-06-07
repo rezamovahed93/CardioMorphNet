@@ -37,7 +37,7 @@ The repository is implemented in Python 3.10. For the most compatibility, please
 
 
 ```bash
-git clone https://github.com/your-username/CardioMorphNet.git 
+git clone https://github.com/rezamovahed93/CardioMorphNet.git 
 cd CardioMorphNet
 conda create --name CMorhNet python=3.10
 conda activate CMorhNet
