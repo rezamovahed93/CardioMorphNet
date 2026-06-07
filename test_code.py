@@ -101,11 +101,8 @@ if __name__ == "__main__":
             
             seq_in = seq_in.to(device)
             seg_in = seg_in.to(device)
-
-            print(es_ed_idx[0])
             
             seg_outs, dis_out, seg_refs, seq_outs, masks_outs, seq_gens, unc_dis_out  = model.inference_forward(seq_in, seg_in, es_ed_idx[0])
-
 
             batch_size = seq_in.shape[0]
 
