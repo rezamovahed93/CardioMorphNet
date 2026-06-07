@@ -53,7 +53,7 @@ Preprocess the raw data and generate the patient split CSV files.
 python main_preprocess.py \
     --data_path <path/to/raw/dataset> \
     --preprocessed_data_path <path/to/save/preprocessed/data> \
-    --csv_paths <path/to/dataset_info.csv> \
+    --csv_paths <path/to/dataset_info of the dataset.csv> \
     --zero_pad_flag
 ```
 
