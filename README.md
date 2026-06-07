@@ -50,7 +50,7 @@ pip install -r requirments.txt
 Preprocess the raw data and generate the patient split CSV files.
 
 ```bash
-python main_preprocess.py \
+python main_preprocess_parallel.py \
     --data_path <path/to/raw/dataset> \
     --preprocessed_data_path <path/to/save/preprocessed/data> \
     --csv_paths <path/to/dataset_info of the dataset.csv> \
