@@ -99,7 +99,8 @@ python vis_results_seg_only.py \
     --results_path ./results_seg_only \
     --saving_dir ./vis_results_seg_only
 
-python eval_cal_seg_only.py
+python eval_seg_only.py \
+    --results_path ./results_seg_only
 ```
 
 ---
